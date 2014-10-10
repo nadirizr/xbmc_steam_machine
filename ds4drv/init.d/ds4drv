@@ -1,0 +1,65 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          skeleton
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Should-Start:      $portmap
+# Should-Stop:       $portmap
+# X-Start-Before:    nis
+# X-Stop-After:      nis
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# X-Interactive:     true
+# Short-Description: Example initscript
+# Description:       This file should be used to construct scripts to be
+#                    placed in /etc/init.d.
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+DESC=ds4drv
+
+DAEMON=/usr/local/bin/ds4drv
+
+SSD_OPTIONS="--chuid 0 --oknodo --quiet --exec $DAEMON"
+PID_FILE="/tmp/ds4drv.pid"
+
+test -f $DAEMON || exit 0
+
+. /lib/lsb/init-functions
+
+set -e
+
+case $1 in
+  start)
+	log_daemon_msg "Starting $DESC"
+
+	start-stop-daemon --start $SSD_OPTIONS
+	log_progress_msg "${DAEMON##*/}"
+
+	log_end_msg 0
+  ;;
+  stop)
+	log_daemon_msg "Stopping $DESC"
+
+	start-stop-daemon --stop $SSD_OPTIONS
+	kill `cat $PID_FILE` || echo "Killed $DESC"
+	log_progress_msg "${DAEMON}"
+
+	log_end_msg 0
+  ;;
+  restart|force-reload)
+	$0 stop
+	sleep 5
+	$0 start
+  ;;
+  status)
+	status_of_proc "$DAEMON" "$DESC" && exit 0 || exit $?
+  ;;
+  *)
+	N=/etc/init.d/ds4drv
+	echo "Usage: $N {start|stop|restart|force-reload|status}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

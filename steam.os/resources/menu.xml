@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Terminal">
+    <action name="Execute"><execute>x-terminal-emulator</execute></action>
+  </item>
+  <item label="Chromium">
+    <action name="Execute"><execute>chromium-browser</execute></action>
+  </item>
+  <item label="PCManFM">
+    <action name="Execute"><execute>dbus-launch pcmanfm</execute></action>
+  </item>
+<item label="XBMC">
+    <action name="Execute"><execute>xbmc</execute></action>
+  </item>
+  <item label="Steam">
+    <action name="Execute"><execute>steam</execute></action>
+  </item>
+  <item label="Steam BPM">
+    <action name="Execute"><execute>~/.config/openbox/steam-bpm.sh</execute></action>
+  </item>
+  <!-- This requires the presence of the 'menu' package to work -->
+  <menu id="/Debian" />
+  <separator />
+<item label="Reboot">
+    <action name="Execute">
+        <prompt>Are you sure you want to reboot?</prompt>
+<execute>dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart</execute>                                                                                                                                              
+    </action>                                                                                                                                                  
+</item>                                                                                                                                                        
+                                                                                                                                                                
+<item label="Shutdown">                                                                                                                                         
+    <action name="Execute">                                                                                                                                     
+        <prompt>Are you sure you want to shutdown?</prompt>                                                                                                                                              
+        <execute>dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop</execute>
+    </action>
+</item>
+
+<item label="Suspend">                                                         
+    <action name="Execute">                                                     
+        <prompt>Are you sure you want to suspend?</prompt>                     
+        <execute>dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Suspend</execute>
+    </action>
+</item>
+
+<item label="Log Out">
+    <action name="Execute">
+      <prompt>Are you sure you want to log-out?</prompt>
+        <execute>openbox --exit</execute>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>
