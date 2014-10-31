@@ -1,0 +1,18 @@
+<settings>
+    <setting id="BusyDialogTime" value="10" />
+    <setting id="DelUserScript" value="false" />
+    <setting id="FilePathCheck" value="true" />
+    <setting id="PostScript" value="" />
+    <setting id="PostScriptEnabled" value="false" />
+    <setting id="PreScript" value="" />
+    <setting id="PreScriptEnabled" value="false" />
+    <setting id="QuitXbmc" value="0" />
+    <setting id="ScriptUpdateCheck" value="true" />
+    <setting id="SteamLinux" value="/usr/bin/steam" />
+    <setting id="SteamOsx" value="/Applications/Steam.app/" />
+    <setting id="SteamWin" value="C:\Program Files (x86)\Steam\steam.exe" />
+    <setting id="XbmcLinux" value="/usr/bin/xbmc" />
+    <setting id="XbmcOsx" value="/Applications/XBMC.app/" />
+    <setting id="XbmcPortable" value="false" />
+    <setting id="XbmcWin" value="C:\Program Files (x86)\XBMC\XBMC.exe" />
+</settings>

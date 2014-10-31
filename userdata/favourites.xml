@@ -1,0 +1,5 @@
+<favourites>
+    <favourite name="Steam" thumb="/home/nadir/.xbmc/addons/script.steam.launcher/icon.png">RunScript(&quot;script.steam.launcher&quot;)</favourite>
+    <favourite name="YouTube" thumb="/home/nadir/.xbmc/addons/plugin.video.youtube/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.youtube/&quot;,return)</favourite>
+    <favourite name="XBMCtorrent" thumb="/home/nadir/.xbmc/addons/plugin.video.xbmctorrent/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.xbmctorrent/&quot;,return)</favourite>
+</favourites>

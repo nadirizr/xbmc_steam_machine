@@ -1,0 +1,11 @@
+<advancedsettings>
+  <useddsfanart>true</useddsfanart>
+  <cputempcommand>cputemp</cputempcommand>
+  <gputempcommand>gputemp</gputempcommand>
+  <samba>
+    <clienttimeout>30</clienttimeout>
+  </samba>
+  <network>
+    <disableipv6>true</disableipv6>
+  </network>
+</advancedsettings>

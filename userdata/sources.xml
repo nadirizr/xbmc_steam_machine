@@ -1,0 +1,57 @@
+<sources>
+    <programs>
+        <default pathversion="1"></default>
+    </programs>
+    <video>
+        <default pathversion="1"></default>
+        <source>
+            <name>Shows</name>
+            <path pathversion="1">smb://GUR-PC/Shows/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>Movies</name>
+            <path pathversion="1">smb://GUR-PC/Movies/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>XBMCtorrent TV</name>
+            <path pathversion="1">special://profile/addon_data/plugin.video.xbmctorrent/tv/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>XBMCtorrent Movies</name>
+            <path pathversion="1">special://profile/addon_data/plugin.video.xbmctorrent/movies/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>XBMCtorrent Downloads</name>
+            <path pathversion="1">/home/nadir/Downloads/XBMCtorrent/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </video>
+    <music>
+        <default pathversion="1"></default>
+        <source>
+            <name>Music</name>
+            <path pathversion="1">/home/nadir/Music/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </music>
+    <pictures>
+        <default pathversion="1"></default>
+        <source>
+            <name>Pictures</name>
+            <path pathversion="1">/home/nadir/Pictures/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </pictures>
+    <files>
+        <default pathversion="1"></default>
+        <source>
+            <name>Downloads</name>
+            <path pathversion="1">/home/nadir/Downloads/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </files>
+</sources>

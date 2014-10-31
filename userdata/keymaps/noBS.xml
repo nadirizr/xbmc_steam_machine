@@ -1,0 +1,7 @@
+<keymap>
+  <global>
+    <keyboard>
+      <backslash>noop</backslash>
+     </keyboard>
+  </global>
+</keymap>
